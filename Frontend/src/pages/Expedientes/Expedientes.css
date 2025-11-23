@@ -1,0 +1,48 @@
+.exp-container {
+  padding: 2rem;
+}
+
+.exp-card {
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.exp-title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.exp-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.exp-filter-item {
+  width: 100%;
+}
+
+.exp-table {
+  margin-top: 1rem;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.exp-table .p-datatable-tbody > tr:hover {
+  background: #f0f4ff !important;
+  cursor: pointer;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  color: white;
+}
+
+.badge-gray { background: #6c757d; }
+.badge-blue { background: #0d6efd; }
+.badge-green { background: #198754; }
+.badge-red { background: #dc3545; }

@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sqlserver
+    restart: always
+    ports:
+      - "1433:1433"
+    env_file:
+      - .env
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA}
+      MSSQL_SA_PASSWORD: ${SA_PASSWORD}
+      TZ: "America/Guatemala"
+    volumes:
+      - mssql_data:/var/opt/mssql
+    networks:
+      - dicri-net
+
+  backend:
+    build: ./backend
+    container_name: dicri-backend
+    restart: always
+    depends_on:
+      - sqlserver
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend/.env
+    environment:
+      DB_HOST: sqlserver
+    networks:
+      - dicri-net
+
+  frontend:
+    build: ./frontend
+    container_name: dicri-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "80:80"
+    networks:
+      - dicri-net
+
+volumes:
+  mssql_data:
+
+networks:
+  dicri-net:
+    driver: bridge

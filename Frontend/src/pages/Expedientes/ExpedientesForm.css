@@ -1,0 +1,236 @@
+.expediente-wrapper {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* 🔥 separa el título de los botones */
+}
+
+
+.btn-save {
+  background: #3cb371;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.estado-badge {
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.estado-badge.borrador { background: #b0b0b0; color: #fff; }
+.estado-badge.pendiente { background: #007bff; color: #fff; }
+.estado-badge.aprobado { background: #28a745; color: #fff; }
+.estado-badge.rechazado { background: #dc3545; color: #fff; }
+
+.form-grid {
+  margin-top: 15px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.form-grid input {
+  width: 100%;
+  padding: 8px;
+}
+
+.tabla-indicios {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.tabla-indicios th,
+.tabla-indicios td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-indicios input {
+  width: 100%;
+  padding: 6px;
+}
+
+.btn-delete {
+  background: #dc3545;
+  border: none;
+  color: white;
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn-add {
+  background: #0d6efd;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.btn-revision {
+  background: #4ec2df;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 12px;
+}
+
+.btn-revision:hover {
+  background: #b3edff;
+}
+/* Estado normal del botón (deshabilitado) */
+.btn-save {
+  background: #c7c7c7;
+  color: #6b6b6b;
+  border: 1px solid #bdbdbd;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: not-allowed;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* Cuando tenga cambios (activo) */
+.btn-save.active {
+  background: #1976d2;
+  color: white;
+  border-color: #0f62a6;
+  cursor: pointer;
+}
+
+/* Hover solo cuando está activo */
+.btn-save.active:hover {
+  background: #125a9f;
+}
+
+.btn-save {
+  background: #c7c7c7;
+  color: #6b6b6b;
+  border: 1px solid #bdbdbd;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: not-allowed;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-save.active {
+  background: #1976d2;
+  color: white;
+  border-color: #0f62a6;
+  cursor: pointer;
+}
+
+.btn-save.active:hover {
+  background: #125a9f;
+}
+
+.btn-revert {
+  background: #e0e0e0;
+  border: 1px solid #bdbdbd;
+  color: #333;
+  padding: 8px 18px;
+  border-radius: 6px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn-revert:hover {
+  background: #cacaca;
+}
+
+.smart-buttons {
+  margin-bottom: 15px;
+}
+
+.smart-btn {
+  background: #eef1ff;
+  border: 1px solid #cfd5ff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.smart-btn:hover {
+  background: #e0e4ff;
+}
+
+/* PANEL LATERAL */
+.side-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100vh;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  animation: slideIn 0.25s ease-out;
+  z-index: 9999;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.side-panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  border: none;
+  background: transparent;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.revision-list {
+  overflow-y: auto;
+  max-height: 90%;
+}
+
+.revision-item {
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #fafafa;
+}
+
+.estado-pill {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  color: white;
+  margin-bottom: 6px;
+}
+
+.estado-pill.pendiente { background: #3b82f6; }
+.estado-pill.aprobado { background: #22c55e; }
+.estado-pill.rechazado { background: #ef4444; }

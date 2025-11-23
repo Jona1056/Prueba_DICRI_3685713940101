@@ -1,0 +1,48 @@
+.rev-container {
+  padding: 20px;
+}
+
+.rev-card {
+  padding: 20px;
+}
+
+.rev-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.rev-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.rev-filter-item {
+  width: 100%;
+}
+
+.rev-table .badge {
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.badge-blue {
+  background: #3b82f6;
+}
+.badge-green {
+  background: #22c55e;
+}
+.badge-red {
+  background: #ef4444;
+}
+.rev-table .p-datatable-tbody > tr {
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.rev-table .p-datatable-tbody > tr:hover {
+  background-color: #f4f6f9 !important;
+}

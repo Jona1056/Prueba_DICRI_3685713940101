@@ -1,0 +1,91 @@
+.usuarios-container {
+  padding: 20px;
+}
+
+.usuarios-card {
+  padding: 20px;
+  border-radius: 14px;
+}
+
+.usuarios-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.full-width .p-datatable-wrapper {
+  width: 100%;
+}
+
+.acciones-cell {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-edit {
+  background: #0084ff !important;
+  color: white !important;
+}
+
+.btn-delete {
+  background: #ff4b4b !important;
+  color: white !important;
+}
+
+/* MODAL */
+.custom-dialog {
+  border-radius: 16px !important;
+}
+
+.modal-header {
+  padding: 8px 0;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.group label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.group input,
+.group select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d8d8d8;
+  outline: none;
+}
+
+.group input:focus,
+.group select:focus {
+  border-color: #006bff;
+  box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2);
+}
+
+.pass-title {
+  margin-top: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+
+.dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+.p-dialog-mask {
+  z-index: 900 !important;
+}
+
+.p-dialog {
+  z-index: 950 !important;
+}

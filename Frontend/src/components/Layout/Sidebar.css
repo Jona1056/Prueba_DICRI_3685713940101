@@ -1,0 +1,98 @@
+.sidebar {
+  width: 250px;
+  background: #10182f;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.sidebar-header {
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-menu {
+  margin-top: 1rem;
+  flex: 1;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  color: #cfd8e3;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.sidebar-item:hover,
+.sidebar-item.active {
+  background: #1a2342;
+  color: #fff;
+}
+
+.sidebar-logout {
+  background: #dc3545;
+  border: none;
+  padding: 12px;
+  margin: 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* ---- User Card ---- */
+
+.sidebar-user {
+  padding: 15px;
+  margin: 10px;
+  background: #ffffff15;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #ffffff22;
+}
+
+.user-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.user-role {
+  font-size: 0.75rem;
+  color: #c5c5c5;
+  background: #00000030;
+  padding: 3px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
