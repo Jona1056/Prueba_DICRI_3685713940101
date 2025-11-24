@@ -12,13 +12,13 @@ El sistema está diseñado para funcionar completamente en contenedores Docker y
 ## Arquitectura del Proyecto
 
 
-![Arquitectura del sistema](\img\arquitectura.png)
+![Arquitectura del sistema](/img/arquitectura.png)
 ---
 
 ## Modelo entidad Relacion
 
 
-![Entidad Relacion](\img\ER.png)
+![Entidad Relacion](/img/ER.png)
 ---
 
 ## Tecnologías Utilizadas
