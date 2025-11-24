@@ -5,3 +5,4 @@ npm install express-validator
 npm install --save-dev nodemon
 npm install socket.io
 npm install --save-dev @types/socket.io
+npm install --save-dev jest supertest

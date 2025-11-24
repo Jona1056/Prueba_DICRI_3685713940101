@@ -13,8 +13,6 @@ services:
       ACCEPT_EULA: ${ACCEPT_EULA}
       MSSQL_SA_PASSWORD: ${SA_PASSWORD}
       TZ: "America/Guatemala"
-    volumes:
-      - mssql_data:/var/opt/mssql
     networks:
       - dicri-net
 
@@ -43,9 +41,6 @@ services:
       - "80:80"
     networks:
       - dicri-net
-
-volumes:
-  mssql_data:
 
 networks:
   dicri-net:

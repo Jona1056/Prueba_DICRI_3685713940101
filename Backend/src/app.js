@@ -53,4 +53,4 @@ app.get("/api", (req, res) => {
 });
 
 // Exportar server (IMPORTANTE)
-export default server;
+export { app, server };

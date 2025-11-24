@@ -42,16 +42,7 @@ router.post(
 
 router.put(
   "/actualizar/:id",
-  [validarJWT, check("nombre").not().isEmpty().withMessage("El nombre es obligatorio."),
-    check("cui")
-      .not()
-      .isEmpty()
-      .withMessage("El CUI es obligatorio.")
-      .matches(/^[0-9]{13}$/)
-      .withMessage("El CUI debe contener exactamente 13 dígitos numéricos."),
-    check("rol").isIn(["tecnico", "coordinador"]).withMessage("Rol inválido."),
-    check("email").isEmail().withMessage("Email inválido."),
-    , validarCampos],
+  [validarJWT, onlySelfOrRole("coordinador"), validarCampos],
   actualizarUsuario
 );
 

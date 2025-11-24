@@ -1,4 +1,4 @@
-import server from "./app.js";
+import { app, server } from "./app.js";
 import { getConnection } from "./config/database.js";
 
 const PORT = process.env.PORT || 3000;
